@@ -34,6 +34,5 @@ module.exports = function (environment) {
     ENV.rootURL = '/nasa-app/';
     ENV.locationType = 'hash';
   }
-
   return ENV;
 };
