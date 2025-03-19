@@ -1,1 +1,77 @@
-/* Ember supports plain CSS out of the box. More info: https://cli.emberjs.com/release/advanced-use/stylesheets/ */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #0b1d32;
+    color: white;
+    text-align: center;
+}
+
+header {
+    background-color: #112240;
+    padding: 20px;
+    font-size: 24px;
+}
+
+main {
+    padding: 20px;
+}
+
+/* Flexbox container for images */
+.gallery {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+
+/* Responsive images */
+.gallery img {
+    width: 100%; 
+    max-width: 300px;
+    height: 300px; 
+    object-fit: cover; 
+    border-radius: 10px;
+    transition: box-shadow 0.1s ease-in-out, transform 0.1s ease-in-out;
+}
+
+/* Hover effect */
+.gallery img:hover {
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.8);
+    transform: scale(1.05);
+}
+
+/* Responsive adjustments based on screen size */
+@media (max-width: 768px) {
+    .gallery img {
+        max-width: 200px;
+        height: 200px;
+    }
+}
+
+@media (max-width: 480px) {
+    .gallery {
+        flex-direction: column; 
+        align-items: center;
+    }
+
+    .gallery img {
+        max-width: 90%;
+        height: auto;
+    }
+}
+
+.fact {
+    background-color: #1a3555;
+    padding: 15px;
+    margin: 20px auto;
+    width: 80%;
+    border-radius: 10px;
+}
+
+footer {
+    background-color: #112240;
+    padding: 10px;
+    margin-top: 20px;
+}
