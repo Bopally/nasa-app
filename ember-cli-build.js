@@ -20,8 +20,6 @@
 //   return app.toTree();
 // };
 
-
-
 const EmberApp = require('ember-cli/lib/broccoli/ember-app');
 
 module.exports = function (defaults) {
@@ -29,7 +27,7 @@ module.exports = function (defaults) {
     fingerprint: {
       prepend: '/nasa-app/',
       extensions: ['js', 'css', 'png', 'jpg', 'gif', 'map'],
-    }
+    },
   });
 
   return app.toTree();
