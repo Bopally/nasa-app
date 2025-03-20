@@ -34,8 +34,8 @@ main {
   object-fit: cover;
   border-radius: 10px;
   transition:
-    box-shadow 0.1s ease-in-out,
-    transform 0.1s ease-in-out;
+    box-shadow 0.3s ease-in-out,
+    transform 0.3s ease-in-out;
 }
 
 /* Hover effect */
