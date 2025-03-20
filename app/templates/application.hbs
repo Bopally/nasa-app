@@ -1,27 +1,20 @@
 {{page-title "Space Exploration"}}
-{{outlet}}
 
 <header>
   <h1>Welcome to Space Exploration</h1>
 </header>
 
 <main>
+  <nav>
+    <LinkTo @route="missions">Missions</LinkTo>
+    <LinkTo @route="homepage">Homepage</LinkTo>
+  </nav>
   <div class="intro">
-    <p>Explore the wonders of the universe and learn fascinating facts about space 🚀</p>
+    <p>Explore the wonders of the universe and learn fascinating facts about
+      space 🚀</p>
   </div>
-
-  <div class="gallery">
-    <img src="https://images-assets.nasa.gov/image/Moon%20to%20Mars%20Infrastructure/Moon%20to%20Mars%20Infrastructure~large.jpg" alt="Moon to Mars Infrastructure">
-    <img src="https://images-assets.nasa.gov/image/PIA23900/PIA23900~orig.jpg" alt="A view of Mars">
-    <img src="https://images-assets.nasa.gov/image/Moon%20to%20Mars%20Operations/Moon%20to%20Mars%20Operations~large.jpg" alt="Moon to Mars Operations">
-  </div>
+  {{outlet}}
 </main>
-
-<aside class="fact">
-  <h2>Did you know?</h2>
-  <p>A day on Venus is longer than a year on Venus!</p> 
-  <p>Venus rotates so slowly that a single day on the planet lasts 243 Earth days. However, it orbits the Sun faster than Earth, completing a year in just 225 Earth days. This means a day on Venus is actually longer than its entire year!</p>
-</aside>
 
 <footer>
   <p>© 2025 Space Enthusiasts</p>
