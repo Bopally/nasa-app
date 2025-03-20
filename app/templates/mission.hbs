@@ -1,0 +1,21 @@
+{{page-title "Mission"}}
+{{outlet}}
+
+<h2>Mission: {{@model.identifier}}</h2>
+<p><strong>Dates:</strong> {{@model.startDate}} - {{@model.endDate}}</p>
+
+<h3>Participants</h3>
+<ul>
+  {{#each @model.people as |participant|}}
+    <li>
+      <strong>{{participant.person.firstName}}
+        {{participant.person.lastName}}</strong>
+      -
+      {{participant.institution}}
+      <br />
+      <em>Role(s): {{participant.roles}}</em>
+    </li>
+  {{/each}}
+</ul>
+
+<LinkTo @route="missions">Back to Missions</LinkTo>
