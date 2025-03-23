@@ -1,5 +1,7 @@
 # compiled output
 /dist/
+/docs/
+/docs/assets/
 /declarations/
 
 # dependencies
