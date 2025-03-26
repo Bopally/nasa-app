@@ -1,21 +1,23 @@
 {{page-title "Mission"}}
 {{outlet}}
 
-<h2>Mission: {{@model.identifier}}</h2>
-<p><strong>Dates:</strong> {{@model.startDate}} - {{@model.endDate}}</p>
+<div class="mission-details">
+  <h2>Mission: {{@model.identifier}}</h2>
+  <p><strong>Dates:</strong> {{@model.startDate}} - {{@model.endDate}}</p>
 
-<h3>Participants</h3>
-<ul>
-  {{#each @model.people as |participant|}}
-    <li>
-      <strong>{{participant.person.firstName}}
-        {{participant.person.lastName}}</strong>
-      -
-      {{participant.institution}}
-      <br />
-      <em>Role(s): {{participant.roles}}</em>
-    </li>
-  {{/each}}
-</ul>
+  <h3>Participants</h3>
+  <ul class="participants-list">
+    {{#each @model.people as |participant|}}
+      <li class="participant-item">
+        <strong>{{participant.person.firstName}}
+          {{participant.person.lastName}}</strong>
+        -
+        {{participant.institution}}
+        <br />
+        <em>Role(s): {{participant.roles}}</em>
+      </li>
+    {{/each}}
+  </ul>
+</div>
 
 <LinkTo @route="missions">Back to Missions</LinkTo>

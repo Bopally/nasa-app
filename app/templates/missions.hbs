@@ -1,16 +1,8 @@
 {{page-title "Missions"}}
 
-{{!-- <h1>Missions</h1>
-
-<ul>
-  {{#each @model as |mission|}}
-    <li><a href={{mission.url}}>link</a></li>
-  {{/each}}
-</ul> --}}
-
 <h2>Space Missions</h2>
 
-<ul>
+{{!-- <ul>
   {{#each @model as |mission|}}
     <li>
       <strong>{{mission}}</strong>
@@ -18,4 +10,11 @@
       <LinkTo @route="mission" @model={{mission}}>View Details</LinkTo>
     </li>
   {{/each}}
-</ul>
+</ul> --}}
+<div class="missions-list">
+  {{#each @model as |mission|}}
+    <div class="mission-item">
+      <LinkTo @route="mission" @model={{mission}}>{{mission}}</LinkTo>
+    </div>
+  {{/each}}
+</div>
