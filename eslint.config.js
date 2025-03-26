@@ -43,7 +43,7 @@ export default [
    * https://eslint.org/docs/latest/use/configure/ignore
    */
   {
-    ignores: ['dist/', 'node_modules/', 'coverage/', '!**/.*'],
+    ignores: ['dist/', 'docs/*', 'node_modules/', 'coverage/', '!**/.*'],
   },
   /**
    * https://eslint.org/docs/latest/use/configure/configuration-files#configuring-linter-options
@@ -86,7 +86,8 @@ export default [
       '.prettierrc.js',
       '.stylelintrc.js',
       '.template-lintrc.js',
-      'ember-cli-build.js',
+      'ember-cli-build.cjs',
+      'server/index.js',
     ],
     plugins: {
       n,
