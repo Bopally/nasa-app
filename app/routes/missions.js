@@ -9,7 +9,6 @@ export default class MissionsRoute extends Route {
       const response = await fetch(apiUrl, { method: 'GET', mode: 'cors' });
       const data = await response.json();
       return data.data.map((element) => {
-        console.log(element.mission);
         const missionIdentifier = decodeURI(element.mission.split('/')[7]);
         return missionIdentifier;
       });
