@@ -1,0 +1,12 @@
+<h1>International Space Station (ISS) Tracker</h1>
+
+{{#if @model.latitude}}
+  <p><strong>Latitude:</strong> {{@model.latitude}}</p>
+  <p><strong>Longitude:</strong> {{@model.longitude}}</p>
+  <p><strong>Altitude:</strong> {{@model.altitude}} km</p>
+  <p><strong>Velocity:</strong> {{@model.velocity}} km/h</p>
+  <button type="button" {{on "click" this.refreshPosition}}>Activate Automatic
+    Refresh</button>
+{{else}}
+  <p>Loading ISS data...</p>
+{{/if}}
