@@ -2,19 +2,41 @@
 
 <h2>Space Missions</h2>
 
-{{!-- <ul>
-  {{#each @model as |mission|}}
-    <li>
-      <strong>{{mission}}</strong>
-      <br />
-      <LinkTo @route="mission" @model={{mission}}>View Details</LinkTo>
-    </li>
-  {{/each}}
-</ul> --}}
-<div class="missions-list">
+{{!-- <div class="missions-list">
   {{#each @model as |mission|}}
     <div class="mission-item">
       <LinkTo @route="mission" @model={{mission}}>{{mission}}</LinkTo>
     </div>
   {{/each}}
-</div>
+</div> --}}
+
+{{!-- {{#if @controller.isLoading}}
+  <div class="loading-spinner">Loading...</div>
+
+  {{! Display missions if isSuccess is true }}
+{{else}}
+  <div class="missions-list">
+    {{#each @model as |mission|}}
+      <div class="mission-item">
+        <LinkTo @route="mission" @model={{mission}}>{{mission}}</LinkTo>
+      </div>
+    {{/each}}
+  </div>
+{{/if}}
+
+{{! Display an error message if isError is true }}
+{{#if @controller.isError}}
+  <div class="error-message">Error loading missions. Please try again later.</div>
+{{/if}} --}}
+
+{{#if this.isLoading}}
+  <p class="loading-message">Loading page, please wait...</p>
+{{else}}
+  <div class="missions-list">
+    {{#each @model as |mission|}}
+      <div class="mission-item">
+        <LinkTo @route="mission" @model={{mission}}>{{mission}}</LinkTo>
+      </div>
+    {{/each}}
+  </div>
+{{/if}}
