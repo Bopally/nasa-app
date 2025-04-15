@@ -29,13 +29,6 @@ a {
   font-weight: bold;
 }
 
-a:hover {
-  color: rgb(208, 169, 141);
-  border: 2px solid rgb(208, 169, 141);
-  border-radius: 5px;
-  background-color: rgba(255, 102, 0, 0.1);
-}
-
 /* Flexbox container for images */
 .gallery {
   display: flex;
@@ -209,5 +202,21 @@ a:hover {
 @media (max-width: 480px) {
   .mission-item {
     width: 100%;
+  }
+}
+
+/* Spinner */
+.spinner {
+  border: 8px solid rgba(0, 0, 0, 0.1);
+  border-top-color: #3498db;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
   }
 }
