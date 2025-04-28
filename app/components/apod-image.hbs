@@ -1,0 +1,26 @@
+<label for="apod-date">Select date: </label>
+<input id="apod-date" type="date" {{on "change" this.updateDate}} />
+{{!create a component for datapicker }}
+
+{{#if this.isError}}
+  <p>Error: Try again</p>
+{{else if this.isLoading}}
+  <p>Loading today's Astronomy Picture of the Day...</p>
+{{else if this.data}}
+  <div class="apod-container">
+    <h2>{{this.data.title}}</h2>
+
+    {{#if this.isImage}}
+      <img src="{{this.data.url}}" alt="{{this.data.title}}" />
+    {{else if this.isVideo}}
+      <iframe
+        src="{{this.data.url}}"
+        title="{{this.data.title}}"
+        class="borderless-iframe"
+      ></iframe>
+    {{else}}
+      <p>Format not supported</p>
+    {{/if}}
+    <p>{{this.data.explanation}}</p>
+  </div>
+{{/if}}

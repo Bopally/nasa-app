@@ -11,4 +11,5 @@ Router.map(function () {
   this.route('missions');
   this.route('mission', { path: '/missions/:mission_id' });
   this.route('iss-location');
+  this.route('apod');
 });
