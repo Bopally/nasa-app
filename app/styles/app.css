@@ -143,7 +143,7 @@ a {
   justify-content: center;
   align-items: center;
   width: 18%; /* 5 par ligne */
-  border: 2px solid rgb(208, 169, 141);
+  border: 2px solid rgb(208 169 141);
   border-radius: 8px;
   text-align: center;
   padding: 15px;
@@ -163,7 +163,7 @@ a {
 
 /* Hover effect */
 .mission-item:hover {
-  background-color: rgba(255, 102, 0, 0.1);
+  background-color: rgb(255 102 0 / 10%);
   transform: scale(1.05);
 }
 
@@ -179,27 +179,27 @@ a {
 /* Each participant */
 .participant-item {
   padding: 10px;
-  border: 1px solid rgb(208, 169, 141);
+  border: 1px solid rgb(208 169 141);
   border-radius: 5px;
-  background-color: rgba(255, 102, 0, 0.1);
+  background-color: rgb(255 102 0 / 10%);
 }
 
 /* Responsive : 3 par ligne */
-@media (max-width: 1024px) {
+@media (width <= 1024px) {
   .mission-item {
     width: 30%;
   }
 }
 
 /* Responsive : 2 par ligne */
-@media (max-width: 768px) {
+@media (width <= 768px) {
   .mission-item {
     width: 45%;
   }
 }
 
 /* Responsive : 1 par ligne */
-@media (max-width: 480px) {
+@media (width <= 480px) {
   .mission-item {
     width: 100%;
   }
@@ -207,7 +207,7 @@ a {
 
 /* Spinner */
 .spinner {
-  border: 8px solid rgba(0, 0, 0, 0.1);
+  border: 8px solid rgb(0 0 0 / 10%);
   border-top-color: #3498db;
   border-radius: 50%;
   width: 50px;
